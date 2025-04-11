@@ -1,17 +1,22 @@
 import tomJerryNibbles.*
 
-describe "Grupo de test" {
 
-  test "test 1" {
-    assert.equals(100, 50+50)
-  }
+test "Tom, Jerry y nibble" {
+  assert.equals(10, tom.velocidadMaxima())
 
-  test "test 3" {
-    assert.that(true)
-  }
+  tom.comer(jerry)
+  assert.equals(15.2, tom.velocidadMaxima())
 
-  test "test 4" {
-    assert.notThat(false)
-  }
+  tom.correr(24)
+  assert.equals(14, tom.velocidadMaxima())
 
+  tom.comer(nibbles)
+  assert.equals(18.7, tom.velocidadMaxima())
+
+  jerry.cumplirAños()
+  tom.comer(jerry)
+  assert.equals(25.9, tom.velocidadMaxima())
+
+  tom.correr(38)
+  assert.equals(24, tom.velocidadMaxima())
 }
